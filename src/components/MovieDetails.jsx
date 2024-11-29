@@ -50,7 +50,7 @@ const MovieDetails = () => {
 
   return (
     <div className="container">
-      <div className="row fs-3 py-4 bg-eadbc8">
+      <div className="row fs-3 py-4">
         <div className="col-md-4">
           <img
             src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
@@ -59,43 +59,37 @@ const MovieDetails = () => {
           />
         </div>
         <div className="col-md-8">
-          <h2 className="mb-3 fs-1">
+          <h1 className="mb-3">
             {movie.title} ({movie.releaseYear})
-          </h2>
+          </h1>
           <p>
-            <strong>Gêneros:</strong>
-            <br />
-            {movie.genres.map((genre) => genre.name).join(", ")}
+            <h3 className="mb-2" >Gêneros</h3>
+            <p className="mb-3">{movie.genres.map((genre) => genre.name).join(", ")}</p>
           </p>
           <p>
-            <strong>Sinopse:</strong>
-            <br />
-            {movie.overview}
+            <h3 className="mb-2" style={{ fontSize: '1.25rem',  }}>Sinopse</h3>
+            <p className="mb-3">{movie.overview}</p>
           </p>
           <div className="row">
             <div className="col-6">
-              <p>
-                <strong>Situação:</strong>
-                <br />
-                {movie.status}
-              </p>
-              <p>
-                <strong>Idioma Original:</strong>
-                <br />
-                {movie.original_language.toUpperCase()}
-              </p>
+              <div className="mb-3">
+                <h3 style={{ fontSize: '1rem', fontWeight: '600', color: '#555', marginBottom: '0.25rem' }}>Situação</h3>
+                <p>{movie.status}</p>
+              </div>
+              <div className="mb-3">
+                <h3 style={{ fontSize: '1rem', fontWeight: '600', color: '#555', marginBottom: '0.25rem' }}>Idioma Original</h3>
+                <p>{movie.original_language.toUpperCase()}</p>
+              </div>
             </div>
             <div className="col-6">
-              <p>
-                <strong>Orçamento:</strong>
-                <br />
-                R${movie.budget.toLocaleString("pt-BR")}
-              </p>
-              <p>
-                <strong>Receita:</strong>
-                <br />
-                R${movie.revenue.toLocaleString("pt-BR")}
-              </p>
+              <div className="mb-3">
+                <h3 style={{ fontSize: '1rem', fontWeight: '600', color: '#555', marginBottom: '0.25rem' }}>Orçamento</h3>
+                <p>R${movie.budget.toLocaleString("pt-BR")}</p>
+              </div>
+              <div className="mb-3">
+                <h3 style={{ fontSize: '1rem', fontWeight: '600', color: '#555', marginBottom: '0.25rem' }}>Receita</h3>
+                <p>R${movie.revenue.toLocaleString("pt-BR")}</p>
+              </div>
             </div>
           </div>
         </div>
