@@ -1,0 +1,3 @@
+GET https://api.themoviedb.org/3/movie/1184918?language=pt-BR
+Content-Type: application/jsoN
+Authorization: {}
