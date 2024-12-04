@@ -1,30 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+
+* {
+  font-family: "League Spartan", sans-serif;
+}
+
 /* Background colors */
-.bg-f8f0e5 { background-color: #F8F0E5 !important; }
-.bg-eadbc8 { background-color: #EADBC8 !important; }
-.bg-dac0a3 { background-color: #DAC0A3 !important; }
-.bg-102c57 { background-color: #102C57 !important; }
-.bg-f2f2f2 { background-color: #F2F2F2 !important; }
-.bg-333333 { background-color: #333333 !important; }
+.bg-f8f0e5 {
+  background-color: #f8f0e5 !important;
+}
+.bg-eadbc8 {
+  background-color: #eadbc8 !important;
+}
+.bg-dac0a3 {
+  background-color: #dac0a3 !important;
+}
+.bg-102c57 {
+  background-color: #102c57 !important;
+}
+.bg-f2f2f2 {
+  background-color: #f2f2f2 !important;
+}
+.bg-333333 {
+  background-color: #333333 !important;
+}
 
 /* Text colors */
-.text-f8f0e5 * { color: #F8F0E5 !important; }
-.text-eadbc8 * { color: #EADBC8 !important; }
-.text-dac0a3 * { color: #DAC0A3 !important; }
-.text-102c57 * { color: #102C57 !important; }
-.text-f2f2f2 * { color: #F2F2F2 !important; }
-.text-333333 * { color: #333333 !important; }
+.text-f8f0e5 * {
+  color: #f8f0e5 !important;
+}
+.text-eadbc8 * {
+  color: #eadbc8 !important;
+}
+.text-dac0a3 * {
+  color: #dac0a3 !important;
+}
+.text-102c57 * {
+  color: #102c57 !important;
+}
+.text-f2f2f2 * {
+  color: #f2f2f2 !important;
+}
+.text-333333 * {
+  color: #333333 !important;
+}
 
 /* Border colors */
-.border-f8f0e5 { border-color: #F8F0E5 !important; }
-.border-eadbc8 { border-color: #EADBC8 !important; }
-.border-dac0a3 { border-color: #DAC0A3 !important; }
-.border-102c57 { border-color: #102C57 !important; }
-.border-f2f2f2 { border-color: #F2F2F2 !important; }
-.border-333333 { border-color: #333333 !important; }
+.border-f8f0e5 {
+  border-color: #f8f0e5 !important;
+}
+.border-eadbc8 {
+  border-color: #eadbc8 !important;
+}
+.border-dac0a3 {
+  border-color: #dac0a3 !important;
+}
+.border-102c57 {
+  border-color: #102c57 !important;
+}
+.border-f2f2f2 {
+  border-color: #f2f2f2 !important;
+}
+.border-333333 {
+  border-color: #333333 !important;
+}
 
-h1, h2, h3 {
-  color: #102C57 !important;
-  font-family: 'League Spartan', sans-serif;
+h1,
+h2,
+h3 {
+  color: #102c57 !important;
   font-weight: bold !important;
 }
 
@@ -40,9 +83,9 @@ h3 {
   font-size: 24px !important;
 }
 
-p, a {
+p,
+a {
   font-size: 24px !important;
-  font-family: 'League Spartan', sans-serif;
 }
 
 p {

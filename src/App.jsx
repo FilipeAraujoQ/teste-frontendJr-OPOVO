@@ -1,6 +1,7 @@
-import { Header } from "./components/Header";
-import MovieDetails from "./components/MovieDetails";
 import Cast from "./components/Cast";
+import Header from "./components/Header";
+import MovieDetails from "./components/MovieDetails";
+import Review from "./components/Review";
 
 export const App = () => {
   return (
@@ -8,6 +9,7 @@ export const App = () => {
       <Header />
       <MovieDetails />
       <Cast />
+      <Review />
     </div>
   );
 };

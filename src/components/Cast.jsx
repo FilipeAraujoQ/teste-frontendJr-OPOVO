@@ -3,7 +3,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import BotaoVerMais from "./BotaoVerMais";
+import Button from "./Button";
 
 const Cast = () => {
   const [cast, setCast] = useState([]);
@@ -47,24 +47,37 @@ const Cast = () => {
   return (
     <div className="bg-eadbc8">
       <div className="container py-4">
-        <div className="d-flex align-items-center mb-4">
+        <div className="d-flex align-items-center">
           <h2
             className="fw-bold"
             style={{ fontSize: "36px", marginRight: "15px" }}
           >
-            Elenco Principal
+            Elenco
           </h2>
-          <BotaoVerMais />
+          <Button
+            style={{
+              width: "125px",
+              height: "40px",
+              borderRadius: "20px",
+              fontSize: "24px",
+              color: "#F8F0E5",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            Ver mais
+          </Button>
         </div>
         <Swiper
           modules={[Navigation]}
-          spaceBetween={10} 
+          spaceBetween={10}
           slidesPerView={4}
           breakpoints={{
-            0: { slidesPerView: 3, spaceBetween: 10 },
-            992: { slidesPerView: 4, spaceBetween: 10 },
-            1200: { slidesPerView: 5, spaceBetween: 10 },
-            1400: { slidesPerView: 6, spaceBetween: 10 },
+            0: { slidesPerView: 3 },
+            992: { slidesPerView: 4 },
+            1200: { slidesPerView: 5 },
+            1400: { slidesPerView: 6 },
           }}
         >
           {cast.map((actor) => (
