@@ -17,7 +17,6 @@ const Media = () => {
   useEffect(() => {
     async function fetchMedias() {
       try {
-        // Buscar vídeos
         const videosResponse = await fetch(
           `${API_BASE_URL}/${MOVIE_ID}/videos?language=pt-BR`,
           {
@@ -29,7 +28,6 @@ const Media = () => {
           }
         );
 
-        // Buscar imagens
         const imagesResponse = await fetch(
           `${API_BASE_URL}/${MOVIE_ID}/images`,
           {
@@ -48,7 +46,6 @@ const Media = () => {
         const videosData = await videosResponse.json();
         const imagesData = await imagesResponse.json();
 
-        // Limitar para 3 vídeos, 4 posters e 2 backdrops
         setVideos(videosData.results.slice(0, 3));
         setPosters(imagesData.posters.slice(0, 4));
         setBackdrops(imagesData.backdrops.slice(0, 2));
@@ -67,20 +64,20 @@ const Media = () => {
   if (error) return <p className="text-danger">{error}</p>;
 
   return (
-    <div className="container py-4">
-      <h1 className="fw-bold mb-4" style={{ fontSize: "36px" }}>
+    <div className="container pt-5 mt-3">
+      <h1 className="fw-bold mb-5" style={{ fontSize: "36px" }}>
         Mídias
       </h1>
 
       {/* Seção de Vídeos */}
-      <div className="mb-5">
-        <div className="d-flex align-items-center mb-3">
+      <div className="mb-1">
+        <div className="d-flex align-items-center mb-2">
           <h2 className="fw-bold me-3" style={{ fontSize: "24px" }}>
             Vídeos ({videos.length})
           </h2>
           <Button
             style={{
-              width: "125px",
+              width: "130px",
               height: "40px",
               borderRadius: "20px",
               fontSize: "24px",
@@ -99,7 +96,7 @@ const Media = () => {
               <div
                 style={{
                   width: "100%",
-                  height: "350px",
+                  height: "225px", 
                   borderRadius: "10px",
                   overflow: "hidden",
                 }}
@@ -109,7 +106,6 @@ const Media = () => {
                   height="100%"
                   src={`https://www.youtube.com/embed/${video.key}`}
                   title={video.name}
-                  frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 ></iframe>
@@ -120,14 +116,14 @@ const Media = () => {
       </div>
 
       {/* Seção de Posters */}
-      <div className="mb-5">
-        <div className="d-flex align-items-center mb-3">
+      <div className="mt-5">
+        <div className="d-flex align-items-center mb-2">
           <h2 className="fw-bold me-3" style={{ fontSize: "24px" }}>
             Posters ({posters.length})
           </h2>
           <Button
             style={{
-              width: "125px",
+              width: "130px",
               height: "40px",
               borderRadius: "20px",
               fontSize: "24px",
@@ -167,14 +163,14 @@ const Media = () => {
       </div>
 
       {/* Seção de Imagens de Fundo */}
-      <div>
-        <div className="d-flex align-items-center mb-3">
+      <div className="mt-5">
+        <div className="d-flex align-items-center mb-2">
           <h2 className="fw-bold me-3" style={{ fontSize: "24px" }}>
             Imagens de Fundo ({backdrops.length})
           </h2>
           <Button
             style={{
-              width: "125px",
+              width: "130px",
               height: "40px",
               borderRadius: "20px",
               fontSize: "24px",

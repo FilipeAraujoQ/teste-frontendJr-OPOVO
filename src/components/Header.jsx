@@ -19,14 +19,14 @@ const Header = () => {
             <span className="navbar-toggler-icon"></span>
           </Button>
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <ul className="navbar-nav ms-auto">
+            <ul className="navbar-nav ms-auto text-f8f0e5 ">
               <li>
-                <a className="nav-link text-" href="#">
+                <a className="nav-link text-f8f0e5" href="#">
                   Filmes
                 </a>
               </li>
               <li>
-                <a className="nav-link disabled" aria-disabled="true">
+                <a className="nav-link disabled text-f8f0e5" aria-disabled="true">
                   Séries
                 </a>
               </li>

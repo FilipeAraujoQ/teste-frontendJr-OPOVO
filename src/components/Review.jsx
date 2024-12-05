@@ -59,7 +59,7 @@ const Review = () => {
 
   return (
     <div className="container py-4">
-      <div className="d-flex align-items-center">
+      <div className="d-flex align-items-center pt-5 pb-3">
         <h2
           className="fw-bold"
           style={{ fontSize: "36px", marginRight: "15px" }}
@@ -70,7 +70,7 @@ const Review = () => {
           <Button
             onClick={handleToggleReviews}
             style={{
-              width: "125px",
+              width: "130px",
               height: "40px",
               borderRadius: "20px",
               fontSize: "24px",

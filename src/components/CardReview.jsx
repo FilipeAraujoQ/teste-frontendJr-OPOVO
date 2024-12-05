@@ -20,28 +20,33 @@ const CardReview = ({ review }) => {
 
   const currentReview = review || defaultReview;
 
+  // Function to truncate text and add ellipsis
+  const truncateText = (text, maxLength) => {
+    if (text.length <= maxLength) return text;
+    return text.substring(0, maxLength).trim() + '...';
+  };
+
   return (
     <div className="card bg-eadbc8 border-0">
       <div className="card-body p-4 position-relative">
-        <p 
-          className="card-text text-break" 
-          style={{ 
-            height: '245px', 
-            overflow: 'hidden', 
-            textOverflow: 'ellipsis' 
+        <p
+          className="card-text text-break"
+          style={{
+            height: '245px',
+            overflow: 'hidden'
           }}
         >
-          {currentReview.content}
+          {truncateText(currentReview.content, 350)}
         </p>
         <div className="d-flex justify-content-between align-items-end">
           <div>
-            <p className="mb-0 fw-bold">{currentReview.author}</p>
+            <p className="mb-1">por <span className="fw-bold text-102c57">{currentReview.author}</span></p>
             <p className="text-muted mb-0">
               {formatDateExtensive(currentReview.created_at)}
             </p>
           </div>
           <p className="position-absolute bottom-0 end-0 m-4">
-            Nota: <span className="text-102c57">{currentReview.author_details.rating || 'N/A'}</span>/10
+            Nota: <span className="fw-bold text-102c57">{currentReview.author_details.rating || 'N/A'}</span>/10
           </p>
         </div>
       </div>
