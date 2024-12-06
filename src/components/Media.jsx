@@ -64,7 +64,7 @@ const Media = () => {
   if (error) return <p className="text-danger">{error}</p>;
 
   return (
-    <div className="container pt-5 mt-3">
+    <div className="container py-5 mt-3">
       <h1 className="fw-bold mb-5" style={{ fontSize: "36px" }}>
         Mídias
       </h1>
@@ -163,7 +163,7 @@ const Media = () => {
       </div>
 
       {/* Seção de Imagens de Fundo */}
-      <div className="mt-5">
+      <div className="mt-5 mb-5">
         <div className="d-flex align-items-center mb-2">
           <h2 className="fw-bold me-3" style={{ fontSize: "24px" }}>
             Imagens de Fundo ({backdrops.length})
