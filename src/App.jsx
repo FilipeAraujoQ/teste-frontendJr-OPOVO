@@ -4,6 +4,7 @@ import MovieDetails from "./components/MovieDetails";
 import Review from "./components/Review";
 import Media from "./components/Media";
 import Recommendations from "./components/Recommendations";
+import Footer from "./components/Footer";
 
 export const App = () => {
   return (
@@ -14,6 +15,7 @@ export const App = () => {
       <Review />
       <Media />
       <Recommendations />
+      <Footer />
     </div>
   );
 };
