@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import "swiper/css";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 const Recommendations = () => {
   const [movies, setMovies] = useState([]);
@@ -55,9 +57,11 @@ const Recommendations = () => {
     <div className="bg-102c57">
       <div className="container-xl pt-4">
         <h2 className="text-f8f0e5 mb-3 pt-2">Recomendações</h2>
-        <div className="row pt-1">
+        
+        {/* Desktop Grid View */}
+        <div className="row pt-1 d-none d-lg-flex">
           {movies.map((movie) => (
-            <div key={movie.id} className="col-md-2 text-center">
+            <div key={movie.id} className="col-lg-2 text-center">
               <img
                 src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                 alt={movie.title}
@@ -75,6 +79,37 @@ const Recommendations = () => {
               </p>
             </div>
           ))}
+        </div>
+
+        {/* Mobile and Tablet Carousel View */}
+        <div className="d-lg-none">
+          <Swiper
+            spaceBetween={10}
+            slidesPerView={2.5}
+            grabCursor={true}
+          >
+            {movies.map((movie) => (
+              <SwiperSlide key={movie.id}>
+                <div className="text-center">
+                  <img
+                    src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                    alt={movie.title}
+                    className="img-fluid rounded mb-2"
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                      maxHeight: "300px",
+                      objectFit: "cover",
+                    }}
+                  />
+                  <p className="fw-bold mb-1 text-f8f0e5">{movie.title}</p>
+                  <p className="text-f8f0e5">
+                    {Math.round(movie.vote_average * 10)}%
+                  </p>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </div>
     </div>
