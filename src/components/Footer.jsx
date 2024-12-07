@@ -4,7 +4,7 @@ import LogoEscura from "./LogoEscura";
 const Footer = () => {
   return (
     <footer className="bg-f8f0e5 py-4">
-      <div className="container py-5">
+      <div className="container-xl py-5">
         <div className="row">
           <div className="col-12 col-lg-3 pb-4 mb-2">
             <LogoEscura />

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import CardReview from "./CardReview";
 import Button from "./Button";
+import CardReview from "./CardReview";
 
 const TOKEN = import.meta.env.VITE_TMDB_TOKEN;
 
@@ -58,7 +58,7 @@ const Review = () => {
   const displayReviews = displayAllReviews ? reviews : reviews.slice(0, 2);
 
   return (
-    <div className="container py-4">
+    <div className="container-xl py-4">
       <div className="d-flex align-items-center pt-5 pb-3">
         <h2
           className="fw-bold"

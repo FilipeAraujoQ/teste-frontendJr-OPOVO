@@ -49,18 +49,18 @@ const MovieDetails = () => {
   }
 
   return (
-    <div className="container">
+    <div className="container-xl">
       <div className="row fs-3 py-4">
-        <div className="col-md-4">
+        <div className="col-12 col-lg-4 text-center text-lg-start">
           <img
             src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
             alt={movie.title}
             className="img-fluid rounded mb-3"
           />
         </div>
-        <div className="col-md-8">
-          <h1 className="mb-3">
-            {movie.title} ({movie.releaseYear})
+        <div className="col-12 col-lg-8">
+          <h1 className="mb-3 text-center text-lg-start w-100">
+            {movie.title} <span className="text-dac0a3">({movie.releaseYear})</span>
           </h1>
           {/* Gêneros */}
           <div className="mb-3">

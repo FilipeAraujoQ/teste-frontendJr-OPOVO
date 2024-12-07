@@ -53,7 +53,7 @@ const Recommendations = () => {
 
   return (
     <div className="bg-102c57">
-      <div className="container pt-4">
+      <div className="container-xl pt-4">
         <h2 className="text-f8f0e5 mb-3 pt-2">Recomendações</h2>
         <div className="row pt-1">
           {movies.map((movie) => (

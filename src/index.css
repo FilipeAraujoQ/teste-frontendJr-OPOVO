@@ -2,7 +2,6 @@
 
 * {
   font-family: "League Spartan", sans-serif;
-  font-size: 24px;
 }
 
 /* Background colors */
@@ -86,9 +85,22 @@ h3 {
 
 p,
 a {
-  font-size: 24px !important;
+  font-size: 24px;
 }
 
 p {
   color: #333333 !important;
+}
+
+
+@media (max-width: 992px) {
+  .text-card {
+    font-size: 18px !important;
+  }
+  .hMedia {
+    font-weight: normal !important;
+  }
+  h1 {
+    font-size: 36px !important;
+  }
 }

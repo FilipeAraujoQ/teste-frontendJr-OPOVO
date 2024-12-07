@@ -20,7 +20,7 @@ const CardReview = ({ review }) => {
 
   const currentReview = review || defaultReview;
 
-  // Function to truncate text and add ellipsis
+
   const truncateText = (text, maxLength) => {
     if (text.length <= maxLength) return text;
     return text.substring(0, maxLength).trim() + '...';
@@ -28,9 +28,9 @@ const CardReview = ({ review }) => {
 
   return (
     <div className="card bg-eadbc8 border-0">
-      <div className="card-body p-4 position-relative">
+      <div className="card-body p-2 p-sm-4 position-relative fs-sm-3 text-card">
         <p
-          className="card-text text-break"
+          className="text-card"
           style={{
             height: '245px',
             overflow: 'hidden'
@@ -38,15 +38,15 @@ const CardReview = ({ review }) => {
         >
           {truncateText(currentReview.content, 350)}
         </p>
-        <div className="d-flex justify-content-between align-items-end">
+        <div className="d-flex justify-content-between align-items-end text-card">
           <div>
-            <p className="mb-1">por <span className="fw-bold text-102c57">{currentReview.author}</span></p>
-            <p className="text-muted mb-0">
+            <p className="mb-1 text-card">por <span className="fw-bold text-102c57 text-card">{currentReview.author}</span></p>
+            <p className="text-muted mb-0 text-card">
               {formatDateExtensive(currentReview.created_at)}
             </p>
           </div>
-          <p className="position-absolute bottom-0 end-0 m-4">
-            Nota: <span className="fw-bold text-102c57">{currentReview.author_details.rating || 'N/A'}</span>/10
+          <p className="position-absolute bottom-0 end-0 m-sm-4 me-2 text-card">
+            Nota: <span className="fw-bold text-102c57 text-card">{currentReview.author_details.rating || 'N/A'}</span>/10
           </p>
         </div>
       </div>

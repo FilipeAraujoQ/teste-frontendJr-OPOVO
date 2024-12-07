@@ -46,7 +46,7 @@ const Cast = () => {
 
   return (
     <div className="bg-eadbc8">
-      <div className="container py-4">
+      <div className="container-xl py-4">
         <div className="d-flex align-items-center pb-3">
           <h2
             className="fw-bold"
@@ -74,7 +74,8 @@ const Cast = () => {
           spaceBetween={10}
           slidesPerView={4}
           breakpoints={{
-            0: { slidesPerView: 3 },
+            0: { slidesPerView: 2 },
+            620: { slidesPerView: 3 },
             992: { slidesPerView: 4 },
             1200: { slidesPerView: 5 },
             1400: { slidesPerView: 6 },
